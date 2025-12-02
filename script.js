@@ -79,7 +79,34 @@ window.addEventListener("scroll",scrollActive);
 
 
 // ========== Contact Form -> Open Gmail Compose ==========
+// ================== EMAIL HELPER (DESKTOP vs MOBILE) ==================
+function openEmailCompose(toEmail, subject, bodyText) {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const encodedSubject = encodeURIComponent(subject);
+    const encodedBody = encodeURIComponent(bodyText);
+
+    if (isMobile) {
+        // On mobile: open default mail app (Gmail app, etc.)
+        const mailtoLink = `mailto:${toEmail}?subject=${encodedSubject}&body=${encodedBody}`;
+        window.location.href = mailtoLink;
+    } else {
+        // On desktop: open Gmail web compose
+        const gmailLink =
+            `https://mail.google.com/mail/?view=cm&fs=1` +
+            `&to=${encodeURIComponent(toEmail)}` +
+            `&su=${encodedSubject}` +
+            `&body=${encodedBody}`;
+
+        window.open(gmailLink, "_blank");
+    }
+}
+
+// ================== CONTACT FORM + HIRE ME BUTTONS ==================
 document.addEventListener("DOMContentLoaded", function () {
+    const toEmail = "ds.rogaye.satyajit@gmail.com";
+
+    // ---- Contact form SEND button ----
     const contactForm = document.getElementById("contact-form");
     if (contactForm) {
         contactForm.addEventListener("submit", function (e) {
@@ -90,8 +117,6 @@ document.addEventListener("DOMContentLoaded", function () {
             const subject = contactForm.querySelector('input[name="subject"]').value;
             const message = contactForm.querySelector('textarea[name="message"]').value;
 
-            const toEmail = "ds.rogaye.satyajit@gmail.com";
-
             const bodyText =
 `Name: ${name}
 Email: ${email}
@@ -99,22 +124,14 @@ Email: ${email}
 Message:
 ${message}`;
 
-            const gmailLink =
-                `https://mail.google.com/mail/?view=cm&fs=1` +
-                `&to=${encodeURIComponent(toEmail)}` +
-                `&su=${encodeURIComponent(subject)}` +
-                `&body=${encodeURIComponent(bodyText)}`;
-
-            window.open(gmailLink, "_blank");
+            openEmailCompose(toEmail, subject, bodyText);
         });
     }
 
-    // ========== Hire Me buttons -> Open Gmail Compose ==========
+    // ---- All "Hire Me" buttons (hero + about) ----
     const hireButtons = document.querySelectorAll(".hire-btn");
-
     hireButtons.forEach((btn) => {
         btn.addEventListener("click", function () {
-            const toEmail = "ds.rogaye.satyajit@gmail.com";
             const subject = "Hiring / Collaboration Inquiry from Portfolio";
             const bodyText =
 `Hi Satyajit,
@@ -125,13 +142,7 @@ I visited your portfolio and would like to discuss an opportunity with you.
 
 Thanks,`;
 
-            const gmailLink =
-                `https://mail.google.com/mail/?view=cm&fs=1` +
-                `&to=${encodeURIComponent(toEmail)}` +
-                `&su=${encodeURIComponent(subject)}` +
-                `&body=${encodeURIComponent(bodyText)}`;
-
-            window.open(gmailLink, "_blank");
+            openEmailCompose(toEmail, subject, bodyText);
         });
     });
 });

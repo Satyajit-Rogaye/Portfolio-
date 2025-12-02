@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio -SatyajitRogaye</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">Logo</p>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav-menu-list">
+                    <li class="nav-list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <!---Dark mode-->
+            <div class="mode">
+                <div class="moon-sun" id="toggle-switch">
+                    <i class="fa fa-moon" id="moon"></i>
+                    <i class="fa fa-sun" id="sun"></i>
+                </div>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <!---main-->
+        <main class="wrapper">
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="hello">
+                        <p>Hello I,m</p>
+                    </div>
+                    <div class="featured-name">
+                        <span class="typedText"></span>
+                    </div>
+                    <div class="text-info">
+                        <p>My name is Satyajit I,m currently learning Data Science AND Machine Learning</p>
+                    </div>
+                    <div class="text-btn">
+                       <button class="btn hire-btn">Hire Me</button>
+
+                        <a href="satyapdf.pdf" class="btn" download>
+                            Download CV <i class="uil uil-file"></i>
+                        </a>
+                    </div>
+                    <div class="social-icons">
+                        <div class="icon-circle"></div>
+
+                        <a href="https://instagram.com/cyber_satya_" class="icon" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/satyajit-rogaye" class="icon" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+
+                        <a href="https://github.com/Satyajit-Rogaye" class="icon" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="myphoto.jpg" alt="">
+                    </div>
+                </div>
+            </section>
+            <!---bout box-->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <figure class="about-me">
+                                <figcaption>
+                                    <img src="circularphoto.png" class="profile" />
+                                    <h2>Data Scientist and ML Engineer</h2>
+                                    <p>My name is Satyajit I,m currently learning Data Science AND Machine Learning</p>
+                                </figcaption>
+                            </figure>
+                            <button class="about-me-btn hire-btn">Hire Me</button>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill-box">
+                            <span class="title">HTML</span>
+                            <div class="skill-bar html">
+                                <span class="skill-per html">
+                                    <span class="tooltip">65%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">CSS</span>
+                            <div class="skill-bar css">
+                                <span class="skill-per css">
+                                    <span class="tooltip">50%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">CPP</span>
+                            <div class="skill-bar">
+                                <span class="skill-per CPP">
+                                    <span class="tooltip">50%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">PYTHON</span>
+                            <div class="skill-bar">
+                                <span class="skill-per python">
+                                    <span class="tooltip">85%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">DATA VISUALIZATION</span>
+                            <div class="skill-bar">
+                                <span class="skill-per datavisualization">
+                                    <span class="tooltip">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">DATA CLEANING</span>
+                            <div class="skill-bar">
+                                <span class="skill-per dataclean">
+                                    <span class="tooltip">80%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="skill-box">
+                            <span class="title">MACHINE LEARNING</span>
+                            <div class="skill-bar">
+                                <span class="skill-per ml">
+                                    <span class="tooltip">60%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!---project box-->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>10+ Finish Projects</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Certificates</h3>
+                        <label>10+ Various Certicates</label>
+                    </div>
+                </div>
+            </section>
+            <!---Contact box-->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Contact Us</h1>
+                    <span>Do you want to clean your data,finding trends and insights from your data,building model on
+                        your data then , Contact Me Here</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p>
+                                <i class="uil uil-envelope"></i>
+                                Email: <a href="mailto:ds.rogaye.satyajit@gmail.com">ds.rogaye.satyajit@gmail.com</a>
+                            </p>
+                            <p>
+                                <i class="uil uil-phone"></i>
+                                Phone: <a href="tel:+919372383929">+91 93723 83929</a>
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <form class="form-control" id="contact-form">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" name="name" placeholder="Your Name" required>
+                                <input type="email" class="input-field" name="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="text-area">
+                                <input type="text" class="input-subject" name="subject" placeholder="Subject" required>
+                                <textarea name="message" placeholder="Message" required></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button type="submit" class="btn">Send<i class="uil uil-message"></i></button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!---Footer-->
+        <footer>
+            <div class="middle-footer">
+                <ul class="footer-menu">
+                    <li class="footer_menu_list">
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li class="footer_menu_list">
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li class="footer_menu_list">
+                        <a href="#projects">Projects</a>
+                    </li>
+                    <li class="footer_menu_list">
+                        <a href="#contact">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-social-icons">
+                <a href="https://instagram.com/cyber_satya_" class="icon" target="_blank" rel="noopener noreferrer">
+                    <i class="uil uil-instagram"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/satyajit-rogaye" class="icon" target="_blank"
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+
+                <a href="https://github.com/Satyajit-Rogaye" class="icon" target="_blank" rel="noopener noreferrer">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+            </div>
+
+            <div class="bottom-footer">
+                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">DS_SatyajitRogaye</a> - All rights
+                    reserved 2025</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
